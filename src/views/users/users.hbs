@@ -1,0 +1,186 @@
+<div class="row">
+  <!-- Config table start -->
+  <div class="col-lg-12" style="margin-top: 10px;">
+    <div class="card">
+      <div class="card-header">
+        <h5 style="color: #F3A701; font-size: 20px;">USERS LIST</h5>
+      </div>
+    </div>
+    <div class="card user-profile-list" style="margin-top: 40px;">
+      <div class="card-body">
+        <div class="row align-items-center m-l-0">
+          <div class="col-sm-6">
+          </div>
+          <div class="col-sm-6 text-right mb-3">
+            <button
+              class="btn btn-primary btn-sm btn-round has-ripple"
+              data-toggle="modal"
+              data-target="#modal-report"
+            ><i class="feather icon-plus"></i> Add User</button>
+          </div>
+        </div>
+        <div class="dt-responsive table-responsive">
+          <table id="basic-btn" class="table nowrap">
+            <thead>
+              <tr>
+
+                <th>Action</th>
+                <th>fullname</th>
+                <th>phone</th>
+                <th>username</th>
+                <th>email</th>
+                <th>role</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              {{#each list}}
+                <tr>
+
+                  <td>
+                    <span class="badge badge-light-danger"></span>
+                    <div class="overlay-edit">
+
+                      <a href="/user/userdetail/{{email}}">
+                        <button
+                          type="button"
+                          class="btn btn-icon btn-success"
+                          {{! id="getsingle_user"
+                           }}
+                        >
+
+                          <i class="feather icon-eye" style="color: white"></i>
+
+                        </button>
+                      </a>
+
+                    </div>
+                  </td>
+                  <td>
+                    {{fullname}}
+                  </td>
+                  <td>{{phone}}</td>
+                  <td>{{username}}</td>
+                  <td>{{email}}</td>
+                  <td>{{role}}</td>
+
+                </tr>
+              {{/each}}
+
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="modal-report"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myExtraLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add User</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label class="floating-label" for="fullname">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullname"
+                  placeholder=""
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="username">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group fill">
+                <label class="floating-label" for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group fill">
+                <label class="floating-label" for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="phone">Phone</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="phone"
+                  placeholder=""
+                />
+              </div>
+            </div>
+
+            <div
+              class="col-sm-12 mt-2"
+              style="border-bottom: 1px solid #E3EAEF;"
+            ></div>
+            {{! <div class="card-body"> }}
+            <div
+              class="col-sm-12 mt-3"
+              style="display:flex; justify-content:space-between"
+            >
+
+              {{! <button class="btn btn-danger">Clear</button> }}
+              <button
+                type="button"
+                class="btn btn-primary float-right"
+                style="display:flex; justify-self:flex-end; align-self:flex-end;"
+                name="add_user"
+                id="add_user"
+              >Submit</button>
+            </div>
+            {{! </div> }}
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

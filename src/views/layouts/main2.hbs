@@ -1,0 +1,107 @@
+<html lang="en">
+
+  <!-- Mirrored from ableproadmin.com/bootstrap/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Nov 2021 00:36:42 GMT -->
+  <head>
+    <title>SWIFT Notification</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="/assets/css/plugins/dataTables.bootstrap4.min.css"
+    />
+
+    <link rel="stylesheet" href="/assets/css/plugins/select2.min.css" />
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+  </head>
+  <body class="">
+    <!-- [ Pre-loader ] start -->
+
+    {{! <div class="pcoded-main-container">
+      <div class="pcoded-content"> }}
+
+    {{{body}}}
+
+    <!-- [ Main Content ] end -->
+    {{! </div>
+    </div> }}
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+
+    <!-- Warning Section Ends -->
+
+    <!-- Required Js -->
+    <script src="/assets/js/vendor-all.min.js"></script>
+    <script src="/assets/js/plugins/bootstrap.min.js"></script>
+    <script src="/assets/js/ripple.js"></script>
+    <script src="/assets/js/pcoded.min.js"></script>
+    {{! <script src="/assets/js/menu-setting.min.js"></script> }}
+
+    <script src="/assets/js/plugins/jquery.dataTables.min.js"></script>
+    <script src="/assets/js/plugins/dataTables.bootstrap4.min.js"></script>
+
+    <script src="/assets/js/plugins/buttons.colVis.min.js"></script>
+    <script src="/assets/js/plugins/buttons.print.min.js"></script>
+    <script src="/assets/js/plugins/pdfmake.min.js"></script>
+    <script src="/assets/js/plugins/jszip.min.js"></script>
+    <script src="/assets/js/plugins/dataTables.buttons.min.js"></script>
+    <script src="/assets/js/plugins/buttons.html5.min.js"></script>
+    <script src="/assets/js/plugins/buttons.bootstrap4.min.js"></script>
+    <script src="/assets/js/pages/data-export-custom.js"></script>
+
+    <script src="/assets/js/plugins/select2.full.min.js"></script>
+    <!-- form-select-custom Js -->
+    <script src="/assets/js/pages/form-select-custom.js"></script>
+
+    <script src="/assets/js/plugins/sweetalert.min.js"></script>
+    <script src="/assets/js/pages/ac-alert.js"></script>
+    <script src="/assets/js/swift/users.js"></script>
+    <script src="/assets/js/swift/login.js"></script>
+    <script src="/assets/js/swift/logout.js"></script>
+    <script src="/assets/js/swift/company.js"></script>
+    <script src="/assets/js/swift/auth.js"></script>
+
+    <script src="/assets/js/plugins/jquery.bootstrap.wizard.min.js"></script>
+
+    <!-- Apex Chart -->
+    <script src="/assets/js/plugins/apexcharts.min.js"></script>
+    <!-- custom-chart js -->
+    <script src="/assets/js/pages/dashboard-main.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() { $('#example').DataTable( { dom: 'Blfrtip',
+      } ); } );
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() { $('#example').DataTable( { "lengthMenu":
+      [[10, 25, 50, -1], [10, 25, 50, "All"]], dom: 'Blfrtip', buttons: [ {
+      extend: 'excelHtml5', title: 'Excel MK', text:'Export to Excel' }, {
+      extend: 'csvHtml5', title: 'CSV MK', text: 'Export to CSV' }, { extend:
+      'pdfHtml5', title: 'PDF MK', className: 'btn_pdf', text: 'Export to PDF'
+      }, ] }); $('.btn_pdf').attr("class","btn btn-success"); } );
+    </script>
+
+  </body>
+
+</html>

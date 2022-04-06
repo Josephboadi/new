@@ -1,0 +1,1229 @@
+{
+	"info": {
+		"_postman_id": "e3b9ac43-eeea-49d1-b263-0a07ec9b5544",
+		"name": "Swift",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\":\"Richard\",\r\n    \"phone\":\"02693132570\",\r\n    \"email\":\"test@test.com\",\r\n    \"username\":\"test\",\r\n    \"password\":\"CAL.1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/swiftapp/v1/users/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"swiftapp",
+								"v1",
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate Local User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"test\",\r\n    \"password\":\"CAL.1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/swiftapp/v1/users/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"swiftapp",
+								"v1",
+								"users",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchMe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/swiftapp/v1/users/fetchme",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"swiftapp",
+								"v1",
+								"users",
+								"fetchme"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rico@test.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/swiftapp/v1/users/find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"swiftapp",
+								"v1",
+								"users",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rico@test.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/swiftapp/v1/users/find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"swiftapp",
+								"v1",
+								"users",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/swiftapp/v1/users/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"swiftapp",
+								"v1",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"test\",\r\n    \"password\":\"CAL.1234$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/swiftapp/v1/users/fetchallusers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"swiftapp",
+								"v1",
+								"users",
+								"fetchallusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\":\"gashie\",\r\n    \"phone\":\"0271565656\",\r\n    \"username\":\"test\",\r\n    \"email\":\"rico@test.com\",\r\n    \"acl_role\":16,\r\n    \"status\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/swiftapp/v1/users/updateuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"swiftapp",
+								"v1",
+								"users",
+								"updateuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchRoles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/swiftapp/v1/users/fetchroles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"swiftapp",
+								"v1",
+								"users",
+								"fetchroles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchStatus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/swiftapp/v1/users/fetchroles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"swiftapp",
+								"v1",
+								"users",
+								"fetchroles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Settings",
+			"item": [
+				{
+					"name": "Email",
+					"item": [
+						{
+							"name": "EmailConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"smtpHost\": \"25\",\r\n    \"smtpPort\": \"CAL.1234$\",\r\n    \"smtpTLS\": \"test\",\r\n    \"smtpUser\": \"CAL.1234$\",\r\n    \"smtpPass\": \"test\",\r\n    \"smtpFrom\": \"CAL.1234$\",\r\n    \"enabled\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/createsmtp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"createsmtp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateEmailConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"4\",\r\n    \"smtpHost\": \"outlook.com\",\r\n    \"smtpPort\": 100,\r\n    \"smtpTLS\": 1,\r\n    \"smtpUser\": \"CAL.1234$\",\r\n    \"smtpPass\": \"test\",\r\n    \"smtpFrom\": \"CAL.1234$\",\r\n     \"enabled\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/updatesmtp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"updatesmtp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetEmailSettings",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/getsmtp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"getsmtp"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sms Gateway",
+					"item": [
+						{
+							"name": "Sms Gateway Config",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"gateway\": \"Sesa SMs\",\r\n    \"gatewayurl\": \"sms.gashie.net/api/sms\",\r\n    \"gatewaykeys\": \"11112212csmdnbsjdhbq211\",\r\n    \"gatewaypassword\": \"Pasv.1234$\",\r\n    \"balance\": 2000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/createsmsgateway",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"createsmsgateway"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateSmsGatewayConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"4\",\r\n    \"smtpHost\": \"outlook.com\",\r\n    \"smtpPort\": 100,\r\n    \"smtpTLS\": 1,\r\n    \"smtpUser\": \"CAL.1234$\",\r\n    \"smtpPass\": \"test\",\r\n    \"smtpFrom\": \"CAL.1234$\",\r\n     \"enabled\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/updatesmtp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"updatesmtp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllGateways",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/allsmsgateway",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"allsmsgateway"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Active Gateway",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/allactivegateway",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"allactivegateway"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find Gateway",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/findsmsgateway",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"findsmsgateway"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Alert Profile",
+					"item": [
+						{
+							"name": "Create Profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerName\": \"Manzi\",\r\n    \"email\": \"manzi@test.com\",\r\n    \"sms\": \"026013257\",\r\n    \"account_number\": \"`111\",\r\n    \"idMsgType\": 101,\r\n    \"idFlow\":\"inwards\",\r\n    \"message_template\": \"Hello Boss\",\r\n    \"internal_alert_email\": \"mis@calbank.net\",\r\n    \"idalert_type\": \"sms\",\r\n    \"status\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/createprofile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"createprofile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"4\",\r\n    \"smtpHost\": \"outlook.com\",\r\n    \"smtpPort\": 100,\r\n    \"smtpTLS\": 1,\r\n    \"smtpUser\": \"CAL.1234$\",\r\n    \"smtpPass\": \"test\",\r\n    \"smtpFrom\": \"CAL.1234$\",\r\n     \"enabled\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/updatesmtp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"updatesmtp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Profiles",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/allprofile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"allprofile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single Profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"albert@test.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/singleprofile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"singleprofile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"albert@test.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/singleprofile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"singleprofile"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Oauth",
+					"item": [
+						{
+							"name": "GetOauthConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/getoath",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"getoath"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateOauthConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"3\",\r\n    \"apikey\": \"25www\",\r\n    \"url\": \"http://10.130.16.77:5000\",\r\n    \"secret\": \"new\",\r\n    \"redirect_uri\": \"http://10.130.16.77:5000/callback\",\r\n     \"enabled\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/updateoath",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"updateoath"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "OauthConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apikey\": \"25\",\r\n    \"oauthurl\": \"http://10.130.16.77:3000\",\r\n    \"secret\": \"test\",\r\n    \"redirect_uri\": \"http://10.130.16.77:3000/callback\",\r\n    \"enabled\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/createoath",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"createoath"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ldap",
+					"item": [
+						{
+							"name": "GetLdapConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/getldap",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"getldap"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateLdapConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"1\",\r\n   \"ldap_user\": \"albert\",\r\n    \"ldap_url\": \"http://10.130.16.77:500\",\r\n    \"ldap_password\": \"pass\",\r\n    \"ldap_domain\": \"calbank.com\",\r\n    \"enabled\":0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/updateldap",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"updateldap"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LdapConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ldap_user\": \"gashie\",\r\n    \"ldap_url\": \"http://10.130.16.77:3000\",\r\n    \"ldap_password\": \"test\",\r\n    \"ldap_domain\": \"domain.com\",\r\n    \"enabled\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/createldap",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"createldap"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Company",
+					"item": [
+						{
+							"name": "CompanyConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "comp_logo",
+											"type": "file",
+											"src": "///Mac/Home/Pictures/myapp.PNG"
+										},
+										{
+											"key": "comp_name",
+											"value": "xc",
+											"type": "text"
+										},
+										{
+											"key": "comp_slogan",
+											"value": "yoyo",
+											"type": "text"
+										},
+										{
+											"key": "comp_email",
+											"value": "d@d.com",
+											"type": "text"
+										},
+										{
+											"key": "comp_url",
+											"value": "https://www.test.com",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "qww",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/createcompany",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"createcompany"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCompany",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlVaVzQxLVgxMTU0LTcxR0MxLUY1MUNCLURBM0NCLUJDRCIsInN0YXRlIjowLCJpYXQiOjE2NDA5NTU4MzMsImV4cCI6MTY0MTA0MjIzM30.T8LxWEqKfbIo59_JdjLubeDGkJEUmpl6oUKyJWTE3No",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/getcompany",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"getcompany"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateCompanyConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "9",
+											"type": "text"
+										},
+										{
+											"key": "comp_logo",
+											"type": "file",
+											"src": "///Mac/Home/Downloads/2409_1948550_1639037301393.jpg"
+										},
+										{
+											"key": "comp_name",
+											"value": "up",
+											"type": "text"
+										},
+										{
+											"key": "comp_slogan",
+											"value": "up",
+											"type": "text"
+										},
+										{
+											"key": "comp_email",
+											"value": "up@up.com",
+											"type": "text"
+										},
+										{
+											"key": "comp_url",
+											"value": "https://www.test.com",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "ok",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/updatecompany",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"updatecompany"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Path",
+					"item": [
+						{
+							"name": "All Paths",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/allpaths",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"allpaths"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Path",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"src_swift_docs_path_print\": \"gashie\",\r\n    \"src_swift_docs_path_pdf\": \"http://10.130.16.77:3000\",\r\n    \"src_swift_docs_path_img\": \"test\",\r\n    \"src_swift_docs_path_txt\": \"domain.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/createpath",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"createpath"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Path",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1,\r\n    \"src_swift_docs_path_print\": \"mypath\",\r\n    \"src_swift_docs_path_pdf\": \"mypath\",\r\n    \"src_swift_docs_path_img\": \"path\",\r\n    \"src_swift_docs_path_txt\": \"past.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/updatepath",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"updatepath"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Token",
+					"item": [
+						{
+							"name": "CreateToken",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Company\":\"CALBANK PLC\",\r\n    \"AppName\": \"SWIFT\",\r\n    \"ipList\": \"192.168.0.90\",\r\n    \"status\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/swiftapp/v1/settings/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"swiftapp",
+										"v1",
+										"settings",
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,117 @@
+<div class="col-sm-12" style="margin-top: 40px;">
+  <div class="card">
+    <div class="card-header">
+      <h5 style="color: #F3A701; font-size: 20px;">COMPANY DETAILS</h5>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top: 40px;">
+
+    <div class="card-body">
+      <form class="mt-4">
+        {{#each list}}
+          <div class="layoutResponsive">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <img
+                  src="/assets/images/company2.svg"
+                  alt=""
+                  style="width: 220px; height: 200px;"
+                />
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label class="floating-label" for="comp_name">Name</label>
+                <input
+                  style="height: 70px"
+                  type="text"
+                  value={{comp_name}}
+                  class="form-control"
+                  id="comp_name"
+                  placeholder="Company Name"
+                />
+              </div>
+              <div class="form-group">
+                <label class="floating-label" for="comp_email">Email</label>
+                <input
+                  style="height: 70px"
+                  type="email"
+                  value={{comp_email}}
+                  class="form-control"
+                  id="comp_email"
+                  aria-describedby="emailHelp"
+                  placeholder="Company Email"
+                />
+              </div>
+              <div class="form-group">
+                <label class="floating-label" for="address">Address</label>
+                <input
+                  style="height: 70px"
+                  value={{address}}
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="Company Address"
+                />
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label class="floating-label" for="comp_url">Website</label>
+                <input
+                  style="height: 70px"
+                  value={{comp_url}}
+                  type="text"
+                  class="form-control"
+                  id="comp_url"
+                  placeholder="Company website"
+                />
+              </div>
+              <div class="form-group">
+                <label class="floating-label" for="comp_slogan">Slogan</label>
+                <input
+                  style="height: 70px"
+                  type="text"
+                  value={{comp_slogan}}
+                  class="form-control"
+                  id="comp_slogan"
+                  placeholder="Company Slogan"
+                />
+              </div>
+              <input
+                type="hidden"
+                id="idsettings_company"
+                name="idsettings_company"
+                value={{idsettings_company}}
+              />
+
+              <div style="height: 55px" class="form-group fill">
+                <label class="floating-label" for="comp_logo">Company logo</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="comp_logo"
+                  placeholder="Company Logo"
+                  style="height: 55px; margin-top:30px;"
+                />
+              </div>
+
+            </div>
+          </div>
+          <button
+            class="btn btn-primary float-right mt-3 mb-2 mr-4"
+            type="button"
+            id="update_company"
+          >Save Details</button>
+        {{/each}}
+      </form>
+
+    </div>
+  </div>
+</div>
+
+{{#if isAdmin}}
+  <li><a href="/settings/company">Admin</a></li>
+
+{{/if}}

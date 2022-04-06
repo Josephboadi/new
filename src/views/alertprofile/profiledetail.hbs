@@ -1,0 +1,178 @@
+<div class="col-sm-12" style="margin-top: 40px;">
+  <div class="card">
+    <div class="card-header">
+      <h5 style="color: #F3A701; font-size: 20px;">ACCOUNT DETAILS</h5>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top: 40px;">
+
+    <div class="card-body">
+      <form class="mt-2">
+        {{#each list}}
+          <div class="layoutResponsive2">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <img
+                  src="/assets/images/alert1.svg"
+                  alt=""
+                  style="width: 220px; height: 200px;"
+                />
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label class="floating-label" for="CustomerName">Customer Name</label>
+                <input
+                  value={{CustomerName}}
+                  style="height: 70px"
+                  type="text"
+                  class="form-control"
+                  id="CustomerName"
+                  placeholder="Customer Name"
+                />
+              </div>
+              <div class="form-group">
+                <label class="floating-label" for="email">Customer Email</label>
+                <input
+                  value={{email}}
+                  style="height: 70px"
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                  placeholder="Customer Email"
+                />
+              </div>
+              <div class="form-group">
+                <label class="floating-label" for="sms">SMS Number</label>
+                <input
+                  value={{sms}}
+                  style="height: 70px"
+                  type="number"
+                  class="form-control"
+                  id="sms"
+                  placeholder="SMS Number"
+                />
+              </div>
+              <div class="form-group">
+                <label class="floating-label" for="internal_alert_email">Alert
+                  Email</label>
+                <input
+                  value={{email}}
+                  style="height: 70px"
+                  type="email"
+                  class="form-control"
+                  id="internal_alert_email"
+                  aria-describedby="emailHelp"
+                  placeholder="Alert Email"
+                />
+              </div>
+
+            </div>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label class="floating-label" for="account_number">Account
+                  Number</label>
+                <input
+                  value={{account_number}}
+                  style="height: 70px"
+                  type="text"
+                  class="form-control"
+                  id="account_number"
+                  placeholder="Account Number"
+                />
+              </div>
+              <div class="form-group">
+                <label class="floating-label" for="Msgtype">Select Message Type</label>
+                <select
+                  style="height: 70px"
+                  class="form-control"
+                  id="idMsgType"
+                >
+                  <option value={{idMsgType}}>MT{{idMsgType}}</option>
+
+                  <option value="101">MT101</option>
+
+                  <option value="104">MT104</option>
+                  <option value="105">MT105</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="floating-label" for="Msgdir">Select Message
+                  Direction</label>
+                <select style="height: 70px" class="form-control" id="idFlow">
+                  <option value={{idFlow}}>{{idFlow}}</option>
+                  <option value="inwards">Inwards</option>
+                  <option value="outwards">Outwards</option>
+                  <option value="both">Both</option>
+                </select>
+              </div>
+              <div
+                style="height: 90px; padding-top: 20px"
+                class="custom-control custom-switch"
+              >
+                <input
+                  type="checkbox"
+                  {{#if status}}
+                    checked
+                  {{/if}}
+                  class="custom-control-input"
+                  id="enabled1"
+                />
+                <label class="custom-control-label" for="enabled1">Enable Alert</label>
+              </div>
+
+            </div>
+
+            <div class="col-sm-12">
+
+              <div class="form-group">
+                <label class="floating-label" for="Alertgroup">Select Message
+                  Template</label>
+                <select
+                  style="height: 70px"
+                  class="form-control"
+                  id="message_template"
+                >
+                  <option value={{message_template}}>{{message_template}}</option>
+                  <option value="accra">Accra branch</option>
+                  <option value="kumasi">Kumasi Branch</option>
+
+                </select>
+              </div>
+
+              <div style="margin-bottom: 190px" class="form-group">
+                <label class="floating-label" for="Alerttype">Select Alert Type</label>
+                <select
+                  style="height: 70px"
+                  class="form-control"
+                  id="idalert_type"
+                >
+                  <option value={{idalert_type}}>{{idalert_type}}</option>
+                  <option value="sms">SMS</option>
+                  <option value="email">Email</option>
+                  <option value="both">Both</option>
+                </select>
+              </div>
+              <input
+                type="hidden"
+                id="idprofile"
+                name="idprofile"
+                value={{idprofile}}
+              />
+            </div>
+
+          </div>
+          <button
+            class="btn btn-primary float-right mt-3 mb-2 mr-4"
+            type="button" id="update_alert"
+          >Save Details</button>
+        {{/each}}
+      </form>
+
+    </div>
+  </div>
+</div>
+

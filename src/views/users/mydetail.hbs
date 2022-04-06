@@ -1,0 +1,159 @@
+	<div class="user-profile user-card mb-4 mt-5">
+			<div class="card-header border-0 p-0 pb-0">
+				<div class="cover-img-block">
+					<!-- <img src="assets/images/profile/cover.jpg" alt="" class="img-fluid"> -->
+					<div class="overlay"></div>
+					<div class="change-cover">
+						<div class="dropdown">
+							<a class="drp-icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon feather icon-camera"></i></a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#"><i class="feather icon-upload-cloud mr-2"></i>upload new</a>
+								{{!-- <a class="dropdown-item" href="#"><i class="feather icon-image mr-2"></i>from photos</a>
+								<a class="dropdown-item" href="#"><i class="feather icon-film mr-2"></i> upload video</a>
+								<a class="dropdown-item" href="#"><i class="feather icon-trash-2 mr-2"></i>remove</a> --}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-body py-0">
+				<div class="user-about-block m-0">
+					<div class="row">
+						<div class="col-md-4 text-center mt-n5">
+							<div class="change-profile text-center">
+								<div class="dropdown w-auto d-inline-block">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<div class="profile-dp">
+											<div class="position-relative d-inline-block">
+												<img class="img-radius img-fluid wid-100" src="/assets/images/user/avatar-5.jpg" alt="User image">
+											</div>
+											<div class="overlay">
+												<span>change</span>
+											</div>
+										</div>
+										<div class="certificated-badge">
+											<i class="fas fa-certificate text-c-blue bg-icon"></i>
+											<i class="fas fa-check front-icon text-white"></i>
+										</div>
+									</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#"><i class="feather icon-upload-cloud mr-2"></i><label class="floating-label" for="Icon">New Upload</label><input style="font-size:small" type="file" class="form-control" id="Icon" placeholder="sdf"></a>
+										{{!-- <a class="dropdown-item" href="#"><i class="feather icon-image mr-2"></i>from photos</a>
+										<a class="dropdown-item" href="#"><i class="feather icon-shield mr-2"></i>Protact</a>
+										<a class="dropdown-item" href="#"><i class="feather icon-trash-2 mr-2"></i>remove</a> --}}
+									</div>
+								</div>
+							</div>
+							<h5 class="mb-1">John Paul</h5>
+							{{!-- <p class="mb-2 text-muted">user</p> --}}
+						</div>
+						<div class="col-md-8 mt-md-4">
+							<div class="row">
+								<div class="col-md-6">
+									<a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-user mr-2 f-18"></i>user</a>
+									<div class="clearfix"></div>
+									<a href="mailto:demo@domain.com" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-mail mr-2 f-18"></i>j@gmail.com</a>
+									<div class="clearfix"></div>
+									<a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-phone mr-2 f-18"></i>+23354555488</a>
+								</div>
+								
+							</div>
+							<ul class="nav nav-tabs profile-tabs nav-fill" id="myTab" role="tablist">
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+         <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Update Profile</h5>
+                    </div>
+                    <div class="card-body">
+                       
+                           <form>
+                               {{#each list}}
+                    <div class="row">
+                        
+                        <div class="col-sm-12">
+              <div class="form-group">
+                <label class="floating-label" for="fullname">Full Name</label>
+                <input
+                  value="{{user}}"
+                  type="text"
+                  class="form-control"
+                  id="fullname"
+                  placeholder="Enter Full Name"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="username">Username</label>
+                <input
+                  value={{username}}
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Enter Username"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group fill">
+                <label class="floating-label" for="email">Email</label>
+                <input
+                  value={{email}}
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter Email"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group fill">
+                <label class="floating-label" for="phone">Phone Number</label>
+                <input
+                  value={{phone}}
+                  type="number"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter Phone Number"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group fill">
+                <label class="floating-label" for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter Password"
+                />
+              </div>
+            </div>
+                        <hr>
+                        
+                        <div class="col-sm-12 mt-2" style="border-bottom: 1px solid #E3EAEF;"></div>
+                        <div class="col-sm-12 mt-4 float-right" style="display:flex; justify-content:flex-end">
+                              {{!-- <button class="btn btn-danger">Clear</button> --}}
+                            <button class="btn btn-primary ">Submit</button>
+                          
+                        </div>
+                    </div>
+                </form>
+                {{/each}}
+                        {{!-- </div> --}}
+                            
+                        </div>
+                       
+                        
+                        
+                     
+                    </div>
+                </div>

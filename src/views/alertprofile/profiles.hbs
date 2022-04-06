@@ -1,0 +1,631 @@
+<div class="row">
+  <!-- Config table start -->
+  <div class="col-lg-12" style="margin-top: 10px;">
+    <div class="card">
+      <div class="card-header">
+        <h5 style="color: #F3A701; font-size: 20px;">Alert Profiles</h5>
+      </div>
+    </div>
+    <div class="card user-profile-list" style="margin-top: 40px;">
+      <div class="card-body">
+        <div class="row align-items-center m-l-0">
+          <div class="col-sm-6">
+          </div>
+          <div class="col-sm-6 text-right mb-3">
+            <button
+              class="btn btn-primary btn-sm btn-round has-ripple"
+              data-toggle="modal"
+              data-target="#modal-report"
+            ><i class="feather icon-plus"></i> Add Alert Profile</button>
+          </div>
+        </div>
+        <div class="dt-responsive table-responsive">
+          <table id="basic-btn" class="table nowrap">
+            <thead>
+              <tr>
+                <th>Action</th>
+
+                <th>Customer Name</th>
+                <th>Customer Email</th>
+                <th>SMS Number</th>
+                <th>Account Number</th>
+                <th>Message Type</th>
+                <th>Message Direction</th>
+                <th>Message Template</th>
+                <th>Alert Email</th>
+                <th>Alert Type</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each list}}
+                <tr>
+                  <td>
+                    <span class="badge badge-light-success"></span>
+                    <div class="overlay-edit">
+                      <a href="/alert/profiledetail/{{email}}">
+                        <button
+                          type="button"
+                          {{! id="getsingle_alert" }}
+                          class="btn btn-icon btn-success"
+                        >
+
+                          <i class="feather icon-eye" style="color: white"></i>
+
+                        </button>
+                      </a>
+
+                    </div>
+                  </td>
+                  <td>
+                    <div class="d-inline-block align-middle">
+
+                      <div class="d-inline-block">
+                        <h6 class="m-b-0"> {{CustomerName}}</h6>
+
+                      </div>
+                    </div>
+                  </td>
+                  <td>{{email}}</td>
+                  <td>{{sms}}</td>
+                  <td>{{account_number}}</td>
+                  <td>{{idMsgType}}</td>
+                  <td>{{idFlow}}</td>
+                  <td>{{message_template}}</td>
+                  <td>{{internal_alert_email}}</td>
+                  <td>{{idalert_type}}</td>
+                  <td>{{status}}</td>
+                </tr>
+              {{/each}}
+
+            </tbody>
+            {{! <tfoot>
+									<tr>
+                                        <th>Action</th>
+                                        <th>Account Name</th>
+										<th>Account Email</th>
+										<th>Account Telephone</th>
+										<th>Account Number</th>
+										<th>Message Type</th>
+										<th>Message Direction</th>
+										<th>Alert Group</th>
+										<th>Alert Type</th>
+										
+									</tr>
+								</tfoot> }}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="modal-report"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myExtraLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Alert Profile</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="CustomerName">Customer Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="CustomerName"
+                  placeholder="Customer Name"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group fill">
+                <label class="floating-label" for="email">Customer Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Customer Email"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="sms">SMS Number</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="sms"
+                  placeholder="SMS Number"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="account_number">Account
+                  Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="account_number"
+                  placeholder="Account Number"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="MsgType">Select Message Type</label>
+                <select class="form-control" id="idMsgType">
+                  <option value=""></option>
+                  <option value="MT103">MT103</option>
+                  <option value="MT104">MT104</option>
+                  <option value="MT105">MT105</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="MsgDir">Select Message
+                  Direction</label>
+                <select class="form-control" id="idFlow">
+                  <option value=""></option>
+                  <option value="Inwards">Inwards</option>
+                  <option value="Outwards">Outwards</option>
+                  <option value="Both">Both</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="Alertgroup">Select Message
+                  Template</label>
+                <select class="form-control" id="message_template">
+                  <option value=""></option>
+                  <option value="Accra">Accra branch</option>
+                  <option value="Kumasi">Kumasi Branch</option>
+
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="Alerttype">Select Alert Type</label>
+                <select class="form-control" id="idalert_type">
+                  <option value=""></option>
+                  <option value="SMS">SMS</option>
+                  <option value="Email">Email</option>
+                  <option value="Both">Both</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group fill">
+                <label class="floating-label" for="internal_alert_email">Alert
+                  Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="internal_alert_email"
+                  placeholder="Alert Email"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div
+                style="height: 90px; padding-top: 20px"
+                class="custom-control custom-switch"
+              >
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="status"
+                />
+                <label class="custom-control-label" for="status">Enable Alert</label>
+              </div>
+            </div>
+            <div
+              class="col-sm-12 mt-2"
+              style="border-bottom: 1px solid #E3EAEF;"
+            ></div>
+            {{! <div class="card-body"> }}
+            <div
+              class="col-sm-12 mt-3"
+              style="display:flex; justify-content:space-between"
+            >
+
+              <button class="btn btn-danger">Clear</button>
+              <button
+                class="btn btn-primary"
+                type="button"
+                id="add_alert"
+              >Submit</button>
+            </div>
+            {{! </div> }}
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{! <div class="row">
+            <!-- customar project  start -->
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center m-l-0">
+                            <div class="col-sm-6">
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <button class="btn btn-success btn-sm btn-round has-ripple" data-toggle="modal" data-target="#modal-report"><i class="feather icon-plus"></i> Add Nurse</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="report-table" class="table table-bordered table-striped mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Address</th>
+                                        <th>Phone</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-1.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Micheal Pewd</td>
+                                        <td>nurse@example.com</td>
+                                        <td>Some address</td>
+                                        <td>+984-46-9388638</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-3.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Erich Mcbride</td>
+                                        <td>xidim@gmail.com</td>
+                                        <td>Some address</td>
+                                        <td>+612-92-1385682</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-1.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Micheal Pewd</td>
+                                        <td>nurse@example.com</td>
+                                        <td>Some address</td>
+                                        <td>+984-46-9388638</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-3.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Erich Mcbride</td>
+                                        <td>xidim@gmail.com</td>
+                                        <td>Some address</td>
+                                        <td>+612-92-1385682</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- customar project  end -->
+        </div>
+
+
+
+        <div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Nurse</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">Name</label>
+                                <input type="text" class="form-control" id="Name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Email">Email</label>
+                                <input type="email" class="form-control" id="Email" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Password">Password</label>
+                                <input type="password" class="form-control" id="Password" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Phone">Phone</label>
+                                <input type="text" class="form-control" id="Phone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="floating-label" for="Address">Address</label>
+                                <textarea class="form-control" id="Address" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Icon">Profie Image</label>
+                                <input type="file" class="form-control" id="Icon" placeholder="sdf">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <button class="btn btn-primary">Submit</button>
+                            <button class="btn btn-danger">Clear</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+  }}
+
+{{! <div class="col-sm-12">
+	 			<div class="card" >
+                    <div class="card-header">
+                        <h5 style="color: #1976D2; font-size: 20px;">USERS LIST</h5>
+                    </div>
+				</div>
+
+				
+
+                <div class="card">
+                    
+                    <div class="card-body">
+						<div class="row align-items-center m-l-0">
+                            <div class="col-sm-6">
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <button class="btn btn-success btn-sm btn-round has-ripple" data-toggle="modal" data-target="#modal-report"><i class="feather icon-plus"></i> Add Laboratorie</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="report-table" class="table table-bordered table-striped mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Address</th>
+                                        <th>Phone</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-1.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Micheal Pewd</td>
+                                        <td>Pharmacist@example.com</td>
+                                        <td>Some address</td>
+                                        <td>+984-46-9388638</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-3.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Erich Mcbride</td>
+                                        <td>xidim@gmail.com</td>
+                                        <td>Some address</td>
+                                        <td>+612-92-1385682</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-1.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Micheal Pewd</td>
+                                        <td>nurse@example.com</td>
+                                        <td>Some address</td>
+                                        <td>+984-46-9388638</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-3.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Erich Mcbride</td>
+                                        <td>xidim@gmail.com</td>
+                                        <td>Some address</td>
+                                        <td>+612-92-1385682</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-1.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Micheal Pewd</td>
+                                        <td>Pharmacist@example.com</td>
+                                        <td>Some address</td>
+                                        <td>+984-46-9388638</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-3.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Erich Mcbride</td>
+                                        <td>xidim@gmail.com</td>
+                                        <td>Some address</td>
+                                        <td>+612-92-1385682</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-1.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Micheal Pewd</td>
+                                        <td>nurse@example.com</td>
+                                        <td>Some address</td>
+                                        <td>+984-46-9388638</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/images/user/avatar-3.jpg" class="img-fluid img-radius wid-40" alt="">
+                                        </td>
+                                        <td>Erich Mcbride</td>
+                                        <td>xidim@gmail.com</td>
+                                        <td>Some address</td>
+                                        <td>+612-92-1385682</td>
+                                        <td>
+                                            <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                            <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div> }}
+
+{{! <div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Laboratorie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">Name</label>
+                                <input type="text" class="form-control" id="Name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Email">Email</label>
+                                <input type="email" class="form-control" id="Email" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Password">Password</label>
+                                <input type="password" class="form-control" id="Password" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Phone">Phone</label>
+                                <input type="text" class="form-control" id="Phone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="floating-label" for="Address">Address</label>
+                                <textarea class="form-control" id="Address" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Icon">Profie Image</label>
+                                <input type="file" class="form-control" id="Icon" placeholder="sdf">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <button class="btn btn-primary">Submit</button>
+                            <button class="btn btn-danger">Clear</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> }}
+
+{{#if isAdmin}}
+  <li><a href="/settings/company">Admin</a></li>
+
+{{/if}}

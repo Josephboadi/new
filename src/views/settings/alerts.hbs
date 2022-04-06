@@ -1,0 +1,102 @@
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <h5 style="color: #F3A701; font-size: 20px;">COMPANY DETAILS</h5>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="card-body">
+      <form class="mt-2">
+        <div class="layoutResponsive">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <img
+                src="/assets/images/company1.svg"
+                alt=""
+                style="width: 220px; height: 200px;"
+              />
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label class="floating-label" for="Text">Text</label>
+              <input
+                style="height: 70px"
+                type="text"
+                class="form-control"
+                id="Text"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group">
+              <label class="floating-label" for="Email">Email</label>
+              <input
+                style="height: 70px"
+                type="email"
+                class="form-control"
+                id="Email"
+                aria-describedby="emailHelp"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group">
+              <label class="floating-label" for="Phone">Telephone</label>
+              <input
+                style="height: 70px"
+                type="text"
+                class="form-control"
+                id="Phone"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label class="floating-label" for="website">Website</label>
+              <input
+                style="height: 70px"
+                type="text"
+                class="form-control"
+                id="website"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group">
+              <label class="floating-label" for="slogan">Slogan</label>
+              <input
+                style="height: 70px"
+                type="text"
+                class="form-control"
+                id="slogan"
+                placeholder=""
+              />
+            </div>
+            <div style="height: 60px" class="custom-file mt-4">
+              <input
+                type="file"
+                class="custom-file-input"
+                id="inputGroupFile03"
+              />
+              <label
+                class="custom-file-label"
+                for="inputGroupFile03"
+              >Logo</label>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn btn-primary float-right mt-3 mb-2 mr-4"
+          type="submit"
+        >Save Details</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+{{#if isAdmin}}
+  <li><a href="/settings/company">Admin</a></li>
+
+{{/if}}

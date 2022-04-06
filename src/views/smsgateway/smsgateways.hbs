@@ -1,0 +1,196 @@
+<div class="row">
+  <!-- Config table start -->
+  <div class="col-lg-12" style="margin-top: 10px;">
+    <div class="card">
+      <div class="card-header">
+        <h5 style="color: #F3A701; font-size: 20px;">SMS GATEWAYS</h5>
+      </div>
+    </div>
+    <div class="card user-profile-list" style="margin-top: 40px;">
+      <div class="card-body">
+        <div class="row align-items-center m-l-0">
+          <div class="col-sm-6">
+          </div>
+          <div class="col-sm-6 text-right mb-3">
+            <button
+              class="btn btn-primary btn-sm btn-round has-ripple"
+              data-toggle="modal"
+              data-target="#modal-report"
+            ><i class="feather icon-plus"></i> Add SMS GATEWAY</button>
+          </div>
+        </div>
+        <div class="dt-responsive table-responsive">
+          <table id="basic-btn" class="table nowrap">
+            <thead>
+              <tr>
+
+                <th>Action</th>
+                <th>Gateway</th>
+                <th>Gateway Url</th>
+                <th>Gateway Keys</th>
+                <th>Gateway Password</th>
+                <th>Balance</th>
+                <th>Status</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              {{#each list}}
+                <tr>
+
+                  <td>
+                    <span class="badge badge-light-danger"></span>
+                    <div class="overlay-edit">
+                      {{! <button
+                        id="delete"
+                        onClick="deletecomp(idsys_users)"
+                        type="button"
+                        class="btn btn-icon btn-danger"
+                      ><i class="feather icon-trash-2"></i></button> }}
+                      <a href="/settings/smsgateway/{{id}}">
+                      
+                        <button  type="button"  id="getsingle_smsgateway"  class="btn btn-icon btn-success">
+
+                          <i class="feather icon-eye" style="color: white"></i>
+
+                        </button>
+                        
+                      </a>
+
+                    </div>
+                  </td>
+                  <td>
+                    {{gateway}}
+                  </td>
+                  <td>{{gatewayurl}}</td>
+                  <td>{{gatewaykeys}}</td>
+                  <td>{{gatewaypassword}}</td>
+                  <td>{{balance}}</td>
+                  <td>{{status}}</td>
+
+                </tr>
+              {{/each}}
+
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="modal-report"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myExtraLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Sms Gateway</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="gateway">Gateway</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="gateway"
+                  placeholder="Enter Gateway"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="floating-label" for="gatewayurl">Gateway Url</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="gatewayurl"
+                  placeholder="Enter Gateway Url"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group fill">
+                <label class="floating-label" for="gatewaykeys">Gateway Keys</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="gatewaykeys"
+                  placeholder="Enter Gateway Keys"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group fill">
+                <label class="floating-label" for="gatewaypassword">Gateway Password</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="gatewaypassword"
+                  placeholder="Enter Gateway Password"
+                />
+              </div>
+              
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group fill">
+                <label class="floating-label" for="balance">Balance</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="balance"
+                  placeholder="Enter Balance"
+                />
+              </div>
+              
+            </div>
+
+            
+           
+            </div>
+
+            <div
+              class="col-sm-12 mt-2"
+              style="border-bottom: 1px solid #E3EAEF;"
+            ></div>
+            {{! <div class="card-body"> }}
+            <div
+              class="col-sm-12 mt-3"
+              style="display:flex; justify-content:space-between"
+            >
+
+              {{! <button class="btn btn-danger">Clear</button> }}
+              <button
+                type="button"
+                class="btn btn-primary float-right"
+                style="display:flex; justify-self:flex-end; align-self:flex-end;"
+                name="add_smsgateway"
+                id="add_smsgateway"
+              >Submit</button>
+            </div>
+            {{! </div> }}
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from ableproadmin.com/bootstrap/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Nov 2021 00:36:42 GMT -->
+<head>
+    <title>SWIFT Notification</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/assets/css/plugins/dataTables.bootstrap4.min.css">
+
+     <link rel="stylesheet" href="/assets/css/plugins/select2.min.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    
+
+</head>
+<body class="">
+	<!-- [ Pre-loader ] start -->
+	<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div>
+	<!-- [ Pre-loader ] End -->
+	<!-- [ navigation menu ] start -->
+	{{>sidebar}}
+	<!-- [ navigation menu ] end -->
+	<!-- [ Header ] start -->
+	{{>headers}}
+	<!-- [ Header ] end -->
+	
+	
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container" >
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        {{>page-header}}
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        
+        {{{body}}}
+
+
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+
+
+
+
+
+<!-- [ Main Content ] end -->
+   
+
+    <!-- Required Js -->
+    <script src="/assets/js/vendor-all.min.js"></script>
+    <script src="/assets/js/plugins/bootstrap.min.js"></script>
+    <script src="/assets/js/ripple.js"></script>
+    <script src="/assets/js/pcoded.min.js"></script>
+	{{!-- <script src="/assets/js/menu-setting.min.js"></script> --}}
+
+<script src="/assets/js/plugins/jquery.dataTables.min.js"></script>
+<script src="/assets/js/plugins/dataTables.bootstrap4.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+
+
+
+<script src="/assets/js/plugins/buttons.colVis.min.js"></script>
+<script src="/assets/js/plugins/buttons.print.min.js"></script>
+<script src="/assets/js/plugins/pdfmake.min.js"></script>
+<script src="/assets/js/plugins/jszip.min.js"></script>
+<script src="/assets/js/plugins/dataTables.buttons.min.js"></script>
+<script src="/assets/js/plugins/buttons.html5.min.js"></script>
+<script src="/assets/js/plugins/buttons.bootstrap4.min.js"></script>
+<script src="/assets/js/pages/data-export-custom.js"></script>
+
+<script src="/assets/js/plugins/select2.full.min.js"></script>
+<!-- form-select-custom Js -->
+<script src="/assets/js/pages/form-select-custom.js"></script>
+
+<script src="/assets/js/plugins/sweetalert.min.js"></script>
+<script src="/assets/js/pages/ac-alert.js"></script>
+<script src="/assets/js/swift/users.js"></script>
+<script src="/assets/js/swift/login.js"></script>
+<script src="/assets/js/swift/logout.js"></script>
+<script src="/assets/js/swift/company.js"></script>
+<script src="/assets/js/swift/auth.js"></script>
+<script src="/assets/js/swift/notification.js"></script>
+<script src="/assets/js/swift/paths.js"></script>
+<script src="/assets/js/swift/alerts.js"></script>
+<script src="/assets/js/swift/sms.js"></script>
+<script src="/assets/js/swift/msg.js"></script>
+<script src="/assets/js/swift/msgmodal.js"></script>
+
+
+<script src="/assets/js/plugins/jquery.bootstrap.wizard.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#besicwizard').bootstrapWizard({
+            withVisible: false,
+            'nextSelector': '.button-next',
+            'previousSelector': '.button-previous',
+            'firstSelector': '.button-first',
+            'lastSelector': '.button-last'
+        });
+        $('#btnwizard').bootstrapWizard({
+            withVisible: false,
+            'nextSelector': '.button-next',
+            'previousSelector': '.button-previous',
+            'firstSelector': '.button-first',
+            'lastSelector': '.button-last'
+        });
+        $('#progresswizard').bootstrapWizard({
+            withVisible: false,
+            'nextSelector': '.button-next',
+            'previousSelector': '.button-previous',
+            'firstSelector': '.button-first',
+            'lastSelector': '.button-last',
+            onTabShow: function(tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index + 1;
+                var $percent = ($current / $total) * 100;
+                $('#progresswizard .progress-bar').css({
+                    width: $percent + '%'
+                });
+            }
+        });
+        $('#validationwizard').bootstrapWizard({
+            withVisible: false,
+            'nextSelector': '.button-next',
+            'previousSelector': '.button-previous',
+            'firstSelector': '.button-first',
+            'lastSelector': '.button-last',
+            onNext: function(tab, navigation, index) {
+                if (index == 1) {
+                    if (!$('#validation-t-name').val()) {
+                        $('#validation-t-name').focus();
+                        $('.form-1').addClass('was-validated');
+                        return false;
+                    }
+                    if (!$('#validation-t-email').val()) {
+                        $('#validation-t-email').focus();
+                        $('.form-1').addClass('was-validated');
+                        return false;
+                    }
+                    if (!$('#validation-t-pwd').val()) {
+                        $('#validation-t-pwd').focus();
+                        $('.form-1').addClass('was-validated');
+                        return false;
+                    }
+                }
+                if (index == 2) {
+                    if (!$('#validation-t-address').val()) {
+                        $('#validation-t-address').focus();
+                        $('.form-2').addClass('was-validated');
+                        return false;
+                    }
+                }
+            }
+        });
+        $('#tabswizard').bootstrapWizard({
+            'nextSelector': '.button-next',
+            'previousSelector': '.button-previous',
+        });
+        $('#verticalwizard').bootstrapWizard({
+            'nextSelector': '.button-next',
+            'previousSelector': '.button-previous',
+        });
+    });
+</script>
+
+<!-- Apex Chart -->
+<script src="/assets/js/plugins/apexcharts.min.js"></script>
+<!-- custom-chart js -->
+<script src="/assets/js/pages/dashboard-main.js"></script>
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,105 @@
+<nav class="pcoded-navbar menu-dark" style="position: fixed;">
+  <div class="navbar-wrapper">
+    <div class="navbar-content scroll-div">
+
+      <div class="">
+        <div class="main-menu-header">
+          <img
+            class="img-radius"
+            src="/assets/images/profile/logo1.png"
+            alt="User-Profile-Image"
+          />
+          <div class="user-details">
+            <div id="more-details">CalBank
+              {{! <i class="fa fa-caret-down"></i> }}
+            </div>
+            <div
+              style="width: 100%; height: 1px; background-color:rgb(201, 197, 197); margin-top: 10px; margin-bottom: 10px;"
+            ></div>
+          </div>
+        </div>
+        {{! <div class="collapse" id="nav-user-link">
+						<ul class="list-inline">
+							<li class="list-inline-item"><a href="user-profile.html" data-toggle="tooltip" title="View Profile"><i class="feather icon-user"></i></a></li>
+							<li class="list-inline-item"><a href="email_inbox.html"><i class="feather icon-mail" data-toggle="tooltip" title="Messages"></i><small class="badge badge-pill badge-primary">5</small></a></li>
+							<li class="list-inline-item"><a href="auth-signin.html" data-toggle="tooltip" title="Logout" class="text-danger"><i class="feather icon-power"></i></a></li>
+						</ul>
+					</div> }}
+      </div>
+
+      <ul class="nav pcoded-inner-navbar mt-4">
+        {{! <li class="nav-item pcoded-menu-caption">
+						<label></label>
+					</li> }}
+        <li><a href="/dashboard">
+            <span class="pcoded-micon"><i
+                class="feather icon-home"
+              ></i></span><span class="pcoded-mtext">Dashboard</span></a></li>
+        <li class="nav-item pcoded-hasmenu">
+          <a href="#!" class="nav-link"><span class="pcoded-micon"><i
+                class="feather icon-settings"
+              ></i></span><span class="pcoded-mtext">Settings</span></a>
+          <ul class="pcoded-submenu">
+            <li><a href="/settings/company">Company</a></li>
+            <li><a href="/settings/auth">Authentication</a></li>
+            <li><a href="/settings/paths">Path/Directories</a></li>
+            <li><a href="/settings/notification">Notification Gateway</a></li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item pcoded-hasmenu">
+          <a href="#!" class="nav-link"><span class="pcoded-micon"><i
+                class="feather icon-users"
+              ></i></span><span class="pcoded-mtext">Manage Users</span></a>
+          <ul class="pcoded-submenu">
+            <li><a href="/users/users">Users</a></li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item pcoded-hasmenu">
+          <a href="#!" class="nav-link"><span class="pcoded-micon"><i
+                class="feather icon-bell"
+              ></i></span><span class="pcoded-mtext">Alert Profiles</span></a>
+          <ul class="pcoded-submenu">
+            <li><a href="/alert/profiles">Profiles</a></li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item pcoded-hasmenu">
+          <a href="#!" class="nav-link"><span class="pcoded-micon"><i
+                class="feather icon-message-square"
+              ></i></span><span class="pcoded-mtext">SMS Gateways</span></a>
+          <ul class="pcoded-submenu">
+            <li><a href="/settings/smsgateways">Gateways</a></li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item pcoded-hasmenu">
+          <a href="#!" class="nav-link"><span class="pcoded-micon"><i
+                class="feather icon-mail"
+              ></i></span><span class="pcoded-mtext">SWIFT Messages</span></a>
+          <ul class="pcoded-submenu">
+            <li><a href="/swift/messages">Messages</a></li>
+
+          </ul>
+        </li>
+
+      </ul>
+
+      {{! <div class="card text-center">
+					<div class="card-block">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<i class="feather icon-sunset f-40"></i>
+						<h6 class="mt-3">Help?</h6>
+						<p>Please contact us on our email for need any support</p>
+						<a href="#!" target="_blank" class="btn btn-primary btn-sm text-white m-0">Support</a>
+					</div>
+				</div> }}
+
+    </div>
+  </div>
+</nav>

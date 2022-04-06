@@ -1,0 +1,79 @@
+<div class="auth-wrapper align-items-stretch aut-bg-img">
+  <div class="flex-grow-1">
+    <div class="h-100 d-md-flex align-items-center auth-side-img">
+      <div class="col-sm-10 auth-content w-auto">
+        {{! <img style="height: 70px; width:70px; color:white" src="/assets/images/logo.png" alt="" class="img-fluid"> }}
+        <h1 class="text-white my-4">Welcome Back!</h1>
+        <h4 class="text-white font-weight-normal">Signin to your SWIFT
+          Notification account and enjoy the time of your life.<br />We believe
+          we you will keep coming back.</h4>
+      </div>
+    </div>
+    <div class="auth-side-form">
+      <div class="auth-content">
+
+        <form action="/login" method="post">
+          <img
+            style="height: 70px; width:70px; margin-left: auto; margin-right:auto; border-radius: 35px"
+            src="/assets/images/profile/logo1.png"
+            alt=""
+            class="img-fluid mb-4 d-block"
+          />
+          <h3 class="mb-4 f-w-400">Signin</h3>
+
+          <div class="form-group mb-3">
+            <label class="floating-label" for="username">Username / Email
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              placeholder="Enter Username / Email"
+            />
+          </div>
+          <div class="form-group mb-4">
+            <label class="floating-label" for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Enter Password"
+            />
+          </div>
+          <div class="custom-control custom-checkbox text-left mb-4 mt-2">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="customCheck1"
+            />
+            <label class="custom-control-label" for="customCheck1">Remember me.</label>
+          </div>
+          {{! <div>
+            <input
+              class='btn btn-block btn-primary mb-4'
+              type='submit'
+              value='Log In'
+            />
+          </div> }}
+          <button
+            type="button"
+            class="btn btn-block btn-primary mb-4"
+            name="login_user"
+            id="login_user"
+          >Signin</button>
+
+          <div class="text-center">
+
+            <p class="mb-2 mt-4 text-muted">Forgot password?
+              <a
+                href="auth-reset-password-img-side.html"
+                class="f-w-400"
+              >Reset</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
